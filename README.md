@@ -11,6 +11,8 @@ When asked, provide a project name, select React as framework and variant Typesc
 Open folder and run `npm i`\
 after installation is done; run `npm run dev`
 
+# Config
+
 In `vite.config.ts` replace
 
 ```
@@ -25,14 +27,23 @@ with
 
 ```
 export default defineConfig({
+  base: "/",
   plugins: [react()],
-  server: {
-    watch: {
-      usePolling: true,
-    },
-    host: true, // needed for the Docker Container port mapping to work
+  preview: {
+    port: 3000,
     strictPort: true,
-    port: 1337, // you can replace this port with any port
+  },
+  server: {
+    host: "0.0.0.0",
+    port: 3000,
   },
 });
+
 ```
+
+# Docker
+
+Create a file called `Dockerfile` in the root
+Add docker commands
+Run `docker build . -t "sample-project:v1.0"`
+Run `docker run -d -p 3000:3000 sample-project:v1.0`

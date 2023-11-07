@@ -2,13 +2,14 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
+  base: "/",
   plugins: [react()],
-  server: {
-    watch: {
-      usePolling: true,
-    },
-    host: true, // needed for the Docker Container port mapping to work
+  preview: {
+    port: 3000,
     strictPort: true,
-    port: 1337, // you can replace this port with any port
+  },
+  server: {
+    host: "0.0.0.0",
+    port: 3000,
   },
 });
