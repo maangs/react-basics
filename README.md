@@ -10,7 +10,7 @@
 ## Run in docker
 
 `docker build . -t "sample-project:v1.0"`\
-`docker run -d -p 3000:3000 sample-project:v1.0`\
+`docker run -d -p 3000:3000 sample-project:v1.0`
 
 # Getting started
 
