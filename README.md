@@ -1,3 +1,17 @@
+# Use this repo
+
+`git clone https://github.com/maangs/react-basics.git`
+`npm install`
+
+## Run locally
+
+`npm run dev`
+
+## Run in docker
+
+`docker build . -t "sample-project:v1.0"`\
+`docker run -d -p 3000:3000 sample-project:v1.0`\
+
 # Getting started
 
 Start by running
@@ -43,7 +57,7 @@ export default defineConfig({
 
 # Docker
 
-Create a file called `Dockerfile` in the root
-Add docker commands
-Run `docker build . -t "sample-project:v1.0"`
-Run `docker run -d -p 3000:3000 sample-project:v1.0`
+Create a file called `Dockerfile` in the root\
+Add docker commands\
+Run `docker build . -t "sample-project:v1.0"`\
+Run `docker run -d -p 3000:3000 sample-project:v1.0`\
