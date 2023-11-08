@@ -1,6 +1,6 @@
 # Use this repo
 
-`git clone https://github.com/maangs/react-basics.git`
+`git clone https://github.com/maangs/react-basics.git`\
 `npm install`
 
 ## Run locally
