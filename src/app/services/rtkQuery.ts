@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export interface user {
   id: number;
@@ -10,13 +10,13 @@ export interface user {
 }
 
 export const userApi = createApi({
-  reducerPath: "users", // oklart
+  reducerPath: 'users',
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://jsonplaceholder.typicode.com/",
+    baseUrl: 'https://jsonplaceholder.typicode.com/',
   }),
   endpoints: (builder) => ({
     getUsers: builder.query<user[], undefined>({
-      query: () => "users",
+      query: () => 'users',
     }),
   }),
 });

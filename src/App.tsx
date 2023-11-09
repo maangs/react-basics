@@ -1,7 +1,7 @@
-import { useState } from "react";
-import "./App.css";
-import { ReduxCounter } from "./app/features/counterComponent";
-import { UserComponent } from "./app/features/userComponent";
+import { useState } from 'react';
+import './App.css';
+import { ReduxCounter } from './app/features/counterComponent';
+import { UserComponent } from './app/features/userComponent';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <h1>React useState hook</h1>
-      <div className="card">
+      <div className='card'>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>

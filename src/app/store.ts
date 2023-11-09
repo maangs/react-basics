@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { counterReducer } from "./features/counterSlice";
-import { userApi } from "./services/rtkQuery";
+import { configureStore } from '@reduxjs/toolkit';
+import { counterReducer } from './features/counterSlice';
+import { userApi } from './services/rtkQuery';
 
 export const store = configureStore({
   reducer: {

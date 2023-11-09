@@ -1,4 +1,4 @@
-import { useGetUsersQuery } from "../services/rtkQuery";
+import { useGetUsersQuery } from '../services/rtkQuery';
 
 export const UserComponent = () => {
   const { data } = useGetUsersQuery(undefined);
