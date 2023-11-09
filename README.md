@@ -61,3 +61,8 @@ Create a file called `Dockerfile` in the root\
 Add docker commands\
 Run `docker build . -t "sample-project:v1.0"`\
 Run `docker run -d -p 3000:3000 sample-project:v1.0`\
+
+# Redux
+
+`npm install @reduxjs/toolkit`\
+`npm install react-redux`\
