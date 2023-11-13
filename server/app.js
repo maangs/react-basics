@@ -1,15 +1,28 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT;
+// const port = process.env.PORT;
 
-app.get('/', (req, res) => {
-  res.send('Works like a charm');
+app.use(cors());
+
+app.get('/test', (req, res) => {
+  res.send([
+    { id: 1, name: 'Johan' },
+    { id: 2, name: 'Mange' },
+  ]);
 });
 
-app.listen(port, () => {
-  console.log(`server running at ${port}`);
+app.post('/', (req, res) => {
+  res.send([
+    { id: 1, name: 'Magnusson' },
+    { id: 2, name: 'Dahlström' },
+  ]);
+});
+
+app.listen(3001, () => {
+  console.log(`server running at 3001`);
 });

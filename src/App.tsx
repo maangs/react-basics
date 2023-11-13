@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { ReduxCounter } from './app/features/counterComponent';
 import { UserComponent } from './app/features/userComponent';
+import { UserTestComponent } from './app/features/userTestComponent';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,7 +14,9 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <UserTestComponent />
         <ReduxCounter />
+
         <UserComponent />
       </div>
     </>
