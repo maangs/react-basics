@@ -1,11 +1,11 @@
-import { useGetUsersQuery } from '../services/rtkQuery';
+import { useGetExternalUsersQuery } from '../services/externalUserQuery';
 
-export const UserComponent = () => {
-  const { data } = useGetUsersQuery(undefined);
+export const ExternalUsersComponent = () => {
+  const { data } = useGetExternalUsersQuery(undefined);
 
   return (
     <>
-      <h1>RTK Query</h1>
+      <h1>RTK Query External users</h1>
       {data?.map((user) => (
         <>
           <p>Name: {user.name}</p>
