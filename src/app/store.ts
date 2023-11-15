@@ -1,18 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { counterReducer } from './features/counterSlice';
-import { userApi } from './services/rtkQuery';
-import { getTestApi } from './services/rtkTestQuery';
+import { externalUserApi } from './services/externalUserQuery';
+import { localUserApi } from './services/localUserQuery';
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer.reducer,
-    [userApi.reducerPath]: userApi.reducer,
-    [getTestApi.reducerPath]: getTestApi.reducer,
+    [externalUserApi.reducerPath]: externalUserApi.reducer,
+    [localUserApi.reducerPath]: localUserApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
-      .concat(userApi.middleware)
-      .concat(getTestApi.middleware),
+      .concat(externalUserApi.middleware)
+      .concat(localUserApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

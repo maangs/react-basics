@@ -5,19 +5,20 @@ export interface testUser {
   name: string;
 }
 
-export const getTestApi = createApi({
-  reducerPath: 'test',
+export const localUserApi = createApi({
+  reducerPath: 'localUsers',
   baseQuery: fetchBaseQuery({
     baseUrl: 'http://localhost:3001/',
   }),
   endpoints: (builder) => ({
-    getTestUsers: builder.query<testUser[], undefined>({
+    getLocalUsers: builder.query<testUser[], undefined>({
       query: () => 'test',
     }),
-    postTestUsers: builder.mutation<testUser[], undefined>({
+    postLocalUsers: builder.mutation<testUser[], undefined>({
       query: () => 'test',
     }),
   }),
 });
 
-export const { useGetTestUsersQuery } = getTestApi;
+export const { useGetLocalUsersQuery, usePostLocalUsersMutation } =
+  localUserApi;

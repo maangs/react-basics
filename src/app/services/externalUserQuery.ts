@@ -9,16 +9,16 @@ export interface user {
   website: string;
 }
 
-export const userApi = createApi({
-  reducerPath: 'users',
+export const externalUserApi = createApi({
+  reducerPath: 'externalUsers',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://jsonplaceholder.typicode.com/',
   }),
   endpoints: (builder) => ({
-    getUsers: builder.query<user[], undefined>({
+    getExternalUsers: builder.query<user[], undefined>({
       query: () => 'users',
     }),
   }),
 });
 
-export const { useGetUsersQuery } = userApi;
+export const { useGetExternalUsersQuery } = externalUserApi;

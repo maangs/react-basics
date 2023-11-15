@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import { ReduxCounter } from './app/features/counterComponent';
-import { UserComponent } from './app/features/userComponent';
-import { UserTestComponent } from './app/features/userTestComponent';
+import { ExternalUsersComponent } from './app/features/externalUsersComponent';
+import { LocalUsersComponent } from './app/features/localUsersComponent';
 import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom';
 
 function App() {
@@ -46,11 +46,11 @@ function App() {
     },
     {
       path: '/localapi',
-      element: <UserTestComponent />,
+      element: <LocalUsersComponent />,
     },
     {
       path: '/externalapi',
-      element: <UserComponent />,
+      element: <ExternalUsersComponent />,
     },
   ]);
 
