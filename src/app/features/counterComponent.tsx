@@ -17,7 +17,7 @@ export const ReduxCounter = () => {
       <h3>Redux State:{count}</h3>
 
       <br />
-      <h3>Ooutlet:</h3>
+      <h3>Outlet tag is used to render sub routes:</h3>
       <Outlet />
     </>
   );
