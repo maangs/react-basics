@@ -13,16 +13,15 @@ function App() {
       path: '/',
       element: (
         <>
-          <nav>
-            <ul>
-              <li>
-                <Link to={`reduxcounter`}>reduxcounter</Link>
-              </li>
-              <li>
-                <Link to={`localapi`}>localapi</Link>
-              </li>
-            </ul>
-          </nav>
+          <Link to={`reduxcounter`}>
+            <button>Redux Counter</button>
+          </Link>
+          <Link to={`localapi`}>
+            <button>Local api</button>
+          </Link>
+          <Link to={`externalapi`}>
+            <button>External api</button>
+          </Link>
           <h1>React useState hook</h1>
           <div className='card'>
             <button onClick={() => setCount((count) => count + 1)}>
